@@ -9,7 +9,7 @@ function getTodos() {
         .then(res => {
             todos = res.data;
 
-            if (todos.length && todosResultsDiv) {
+            if (todos.length && todosResultsDiv && todosResultsDiv.textContent === '') {
                 todosResultsDiv.style.display = 'block';
 
                 for (let todo of todos) {
