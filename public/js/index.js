@@ -1,6 +1,8 @@
+'use strict';
+
 function getTodos() {
     let todos = [];
-    let todosResultsDiv = document.querySelector('#todosResults');
+    const todosResultsDiv = document.querySelector('#todosResults');
 
     fetch('/api/todos')
         .then(res => res.json())
@@ -10,8 +12,9 @@ function getTodos() {
             if (todos.length && todosResultsDiv) {
                 todosResultsDiv.style.display = 'block';
 
-                for (todo of todos) {
-                    let div = document.createElement('div');
+                for (let todo of todos) {
+                    const div = document.createElement('div');
+
                     div.textContent = `${todo.title} | ${todo.isDone}`;
                     todosResultsDiv.append(div);
                 }
