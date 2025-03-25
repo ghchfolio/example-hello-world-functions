@@ -23,7 +23,9 @@ body {
     padding: 2rem;
     padding-bottom: 6rem;
     border-top: 5px solid var(--accent-color);
+
     @include bp(mid) {}
+
     @include bp(wide) {
         font-size: 18px;
     }
@@ -35,10 +37,18 @@ body {
     text-align: left;
 }
 
+#todosResults {
+    padding: 10px;
+    display: none;
+    background-color: #e7fdee;
+    color: black;
+}
+
 @media (min-width: 800px) {
     body {
         font-size: 16px;
     }
+
     .container {
         max-width: 700px;
     }
@@ -48,6 +58,7 @@ body {
     body {
         font-size: 18px;
     }
+
     .container {
         max-width: 900px;
     }
